@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %} Choose Template {% endblock %}
+{% block content %}
+
+<style>
+body , html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.classTemplate {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.TempElement {
+    border: 1px solid lightslategray;
+    padding: 20px 50px 130px 30px;
+    margin-top: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: left;
+    background-color: white;
+    text-decoration-color: grey;
+    box-shadow: 7px 5px 5px lightgray;
+
+}
+
+
+body {
+    flex-grow: 1;
+}
+.TempElement:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+
+
+</style>
+        <div class="classTemplate">
+            <button class="TempElement" id="Basic">
+                Basic-
+                <br>Template
+            </button>
+            <button class="TempElement" id="Buissnes">
+                Buisness
+                <br>Template
+            </button>
+        </div>
+{% endblock %}
+
