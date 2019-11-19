@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'home',
     'accounts',
     'newsletter',
+    'chooseTemp',
     'crispy_forms',
     # 'mjml',
 

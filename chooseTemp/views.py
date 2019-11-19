@@ -4,7 +4,6 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 
 
-class NewsletterEditor(TemplateView):
-    template_name = 'newsletter/editor.html'
-
+class ChooseTemp(TemplateView):
+    template_name = 'chooseTemp/chooseTemp.html'
 
