@@ -8,9 +8,9 @@
     <h2>Homepage</h2>
     {% if user.is_authenticated %}
         Hi, you are logged in as {{ user.username }}
-        <p><a href="{% url 'logout' %}">logout</a></p>
+        <p><a href="{% url 'accounts:logout' %}">logout</a></p>
     {% else %}
         <p>You are not logged in</p>
-         <a href="{% url 'login' %}" class="btn btn-outline-secondary " role="button" aria-pressed="true">LogIn</a>
+         <a href="{% url 'accounts:login' %}" class="btn btn-outline-secondary " role="button" aria-pressed="true">LogIn</a>
     {% endif %}
 {% endblock %}

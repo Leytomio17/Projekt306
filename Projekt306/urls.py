@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import include
 
+from accounts import views
 from home.views import Home
+from newsletter.views import NewsletterEditor
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('accounts.urls')),
     path('', Home.as_view(), name='home'),
+    path('newsletter/', NewsletterEditor.as_view(), name='newsletter')
 ]

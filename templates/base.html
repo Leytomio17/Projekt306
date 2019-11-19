@@ -9,70 +9,50 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
+{#        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"#}
+{#                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"#}
+{#                crossorigin="anonymous"></script>#}
+{#        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"#}
+{#                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"#}
+{#                crossorigin="anonymous"></script>#}
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-    {#    <script src="{% static 'js/test.js' %}"></script>#}
-    {#    <link rel=”stylesheet” href=”{% static 'css/styles.css' %}”>#}
+{#    <link href="static/CSS/style_editor.css" rel="style_editor">#}
 
 
 </head>
 
 <body>
 <header>
-    {#    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">#}
-    {#        <a href="{% url 'home' %}" class="navbar-brand" >HOME</a>#}
-    {##}
-    {#        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNavAltMarkup"#}
-    {#                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">#}
-    {#            <span class="navbar-toggler-icon"></span>#}
-    {#        </button>#}
-    {##}
-    {#        <div class="collapse navbar-collapse" id="navbarNav">#}
-    {#            <ul class="navbar-nav">#}
-    {#                <li class="nav-item">#}
-    {#                    <a href="{% url 'home' %}">Home class="nav-link"  </a>#}
-    {#                </li>#}
-    {#                <li class="nav-item">#}
-    {#                    <a class="nav-link" href="{% url 'login' %}">Login</a>#}
-    {#                </li>#}
-    {#            </ul>#}
-    {#        </div>#}
-    {#    </nav>#}
 
-
+    {#    TODO      #}
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
         <!-- Brand -->
-        <div class="d-flex justify-content">
-            <a class="navbar-brand" href="{% url 'home' %}">Logo</a>
-            <!-- Links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'home' %}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Signup</a> {# TODO #}
-                </li>
+        {#        <div class="d-flex">#}
+        <a class="navbar-brand" href="{% url 'home' %}">Logo</a>
 
-            </ul>
-        </div>
-        <div class="d-flex justify-content-end">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'accounts:signup' %}">Signup</a>
+            </li>
+
+        </ul>
+        {#        </div>#}
+        <div class="d-flex">
             <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-10" type="submit">Search</button>
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
     </nav>
-
 
 </header>
 {% block content %}

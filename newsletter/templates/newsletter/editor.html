@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Newsletter Editor {% endblock title %}
+
+{% block content %}
+
+    <!-- Tools -->
+    <div class="newsletter-elements">
+        <div class="element" id="spalte1" draggable="true">
+            1-Spalten - Layout
+        </div>
+
+        <div class="element" id="spalte2" draggable="true">
+            2-Spalten - Layout
+        </div>
+
+        <div class="element" id="spalte3">
+            3-Spalten - Layout
+        </div>
+
+        <div class="element" id="trennlinie">
+            Trennelement
+        </div>
+    </div>
+
+    <!-- Newsletter Editor -->
+
+    <div class="newsletter-editor">
+        <!-- Header -->
+        <div class="header"></div>
+        <!-- Body -->
+        <div class="body">
+            <!-- Creation  Zone -->
+            <div class="creationZone"></div>
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+        </div>
+    </div>
+
+    s
+    <!-- CSS -->
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .newsletter-elements {
+            display: flex;
+        {#flex-direction: column;#} justify-content: space-around;
+            margin-bottom: 50px;
+        }
+
+        .element {
+            border: 1px solid lightgray;
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+        .element:hover {
+            background-color: lightgray;
+            cursor: pointer;
+        }
+
+        .newsletter-editor {
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .body {
+            flex-grow: 1;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .footer {
+            padding: 20px;
+        }
+
+        .placeholder {
+            width: 100%;
+            height: 50px;
+            background-color: #efefef;
+            border: 1px dashed;
+        }
+
+        .placeholder:hover {
+            background-color: gray;
+            cursor: pointer;
+        }
+
+    </style>
+{% endblock %}
