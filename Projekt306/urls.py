@@ -20,12 +20,14 @@ from django.urls import include
 from accounts import views
 from chooseTemp.views import ChooseTemp
 from home.views import Home
-from newsletter.views import NewsletterEditor
+from newsletter.views import NewsletterEditor, make_post
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('', Home.as_view(), name='home'),
     path('chooseTemp/', ChooseTemp.as_view(), name='chooseTemp'),
-    path('newsletter/', NewsletterEditor.as_view(), name='newsletter')
+    path('newsletter/', NewsletterEditor.as_view(), name='newsletter'),
+    path('post/', include('newsletter.urls')),
+    path('froala_editor/', include('froala_editor.urls')),
 ]

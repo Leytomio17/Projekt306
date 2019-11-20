@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'newsletter',
     'chooseTemp',
     'crispy_forms',
+    'froala_editor',
     # 'mjml',
 
 ]
@@ -121,3 +122,19 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+FROALA_INCLUDE_JQUERY = False
+
+FRAOLA_EDITOR_THIRD_PARTY = ('image_aviary', 'spell_checker')
+FROALA_EDITOR_PLUGINS = ('align', 'char_counter', 'code_beautifier', 'code_view', 'colors', 'draggable', 'emoticons',
+                         'entities', 'file', 'font_family', 'font_size', 'fullscreen', 'image_manager', 'image',
+                         'inline_style',
+                         'line_breaker', 'link', 'html', 'lists', 'paragraph_format', 'paragraph_style', 'quick_insert',
+                         'quote', 'save', 'table',
+                         'url', 'video')
+
+FROALA_EDITOR_OPTIONS = { 'KEY': 'YOUR KEY' }
