@@ -2,29 +2,37 @@
 {% block title %} Choose Template {% endblock %}
 {% block content %}
 
-<style>
-body , html {
+    <style xmlns:content="http://www.w3.org/1999/xhtml">
+
+
+        body , html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
+
+        body {
+            min-height: 100%;
+        }
 
 .classTemplate {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
-.TempElement {
+
+        .TempElement {
     border: 1px solid lightslategray;
-    padding: 20px 50px 130px 30px;
+            padding: 20px 50px 50px 50px;
     margin-top: 100px;
     margin-right: 10px;
     margin-left: 10px;
-    text-align: left;
+            vertical-align: top;
+            text-align: center;
     background-color: white;
-    text-decoration-color: grey;
     box-shadow: 7px 5px 5px lightgray;
-
+            font-weight: bold;
+            color: grey;
 }
 
 
@@ -36,17 +44,34 @@ body {
     cursor: pointer;
 }
 
+        .TempElement .fa-clipboard {
+            display: compact;
+            justify-content: center;
+            align-items: center;
+            padding-top: 40px;
+
+        }
+
+        .TempElement .fa-briefcase {
+            display: compact;
+            justify-content: center;
+            align-items: center;
+            padding-top: 40px;
+        }
+
 
 
 </style>
         <div class="classTemplate">
-            <button class="TempElement" id="Basic">
-                Basic-
+            <button class="TempElement">
+                <br>Basic-
                 <br>Template
+                <div><i class="far fa-clipboard fa-3x"></i></div>
             </button>
-            <button class="TempElement" id="Buissnes">
-                Buisness
+            <button class="TempElement">
+                <br>Buisness
                 <br>Template
+                <div><i class="fas fa-briefcase fa-3x"></i></div>
             </button>
         </div>
 {% endblock %}
